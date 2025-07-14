@@ -31,7 +31,7 @@ const Home = () => {
             <i className={ active ? 'fa fa-close' : 'fa fa-bars'} aria-hidden="true" onClick={handleActive}></i></div>
             </div>
                 <nav className="navbar">
-                    <NavLink to='/me' className={({ isActive }) =>
+                    <NavLink to='/' className={({ isActive }) =>
           isActive ? "nav-link nav-active" : "nav-link"
         }  onClick={handleActive}>
                         <i className="fa fa-ellipsis-v" aria-hidden="true"></i>
@@ -41,7 +41,7 @@ const Home = () => {
                     </NavLink>
             <NavLink className={({ isActive }) =>
           isActive ? "nav-link nav-active" : "nav-link"
-        } to='/'  onClick={handleActive}><i className="fa-solid fa-calculator"></i>
+        } to='/calc'  onClick={handleActive}><i className="fa-solid fa-calculator"></i>
                 <p>
                     JS Calculator
                 </p>
@@ -89,8 +89,8 @@ const Home = () => {
     </div>
     {/* <!-- Main --> */}
     <Routes>
-        <Route path='me' element={<Me />} />
-        <Route path='/' element={<Calc />} />
+        <Route path='/' element={<Me />} />
+        <Route path='calc' element={<Calc />} />
         <Route path='q' element={<Quote />} />
         <Route path='clock' element={<Clock />} />
         <Route path='drums' element={<Drums />} />
