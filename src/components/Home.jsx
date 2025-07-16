@@ -19,7 +19,6 @@ const Home = () => {
     const handleActive = () => {setActive(!active)}
 
   return (
-    <Router>
 
     <>
     <div className={ active ? 'side active' : 'side'} id="side">
@@ -104,7 +103,6 @@ const Home = () => {
     <Footer />
     {/* <!-- Footer --> */}
     </>
-    </Router>
   )
 }
 
