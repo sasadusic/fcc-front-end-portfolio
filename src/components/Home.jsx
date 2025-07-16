@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Router, Routes, Route, NavLink, Link } from "react-router"
+import { Router, Routes, Route, NavLink, Link } from "react-router-dom"
 
 import './style.css'
 import Me from '../pages/Me.jsx'
