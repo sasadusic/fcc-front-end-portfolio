@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router"
+import { Router, Routes, Route, NavLink, Link } from "react-router"
 
 import './style.css'
 import Me from '../pages/Me.jsx'
@@ -19,11 +19,13 @@ const Home = () => {
     const handleActive = () => {setActive(!active)}
 
   return (
+    <Router>
+
     <>
     <div className={ active ? 'side active' : 'side'} id="side">
         <div className="side-up">
 
-            <div id="logo" className="logo"><img className='logo-image' src={logo} alt="" /><NavLink to='/me'>
+            <div id="logo" className="logo"><img className='logo-image' src={logo} alt="" /><NavLink to='/'>
                 DusicCode
             </NavLink>
             <div className="hamburger">
@@ -79,7 +81,7 @@ const Home = () => {
         <div className="profile-info">
             {/* <a className="done" href="register.html">Register</a>
             <a className="send" href="login.html"><i className="fa fa-paper-plane" aria-hidden="true"></i>
-                Login</a>
+            Login</a>
             <a className="profile" href="#">
                 <div className="profile-img"></div>    
                 <p>Sasa Dusic</p>
@@ -102,6 +104,7 @@ const Home = () => {
     <Footer />
     {/* <!-- Footer --> */}
     </>
+    </Router>
   )
 }
 
